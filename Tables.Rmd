@@ -1,0 +1,14 @@
+---
+title: "Mask Project Tables"
+output: pdf_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+tab <- matrix(c(2,4,3,88,93,42,25,34,26),ncol=3)
+colnames(tab) <- c("Floor", "Medical", "Non-Medical")
+rownames(tab) <- c("Tues.", "Wed.","Thurs.")
+knitr::kable(tab, caption = "Frequency Distribution Table of People in The Library")
+```
