@@ -1,0 +1,30 @@
+---
+title: "Summary"
+author: "Connor Adams"
+date: "3/21/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+\tableofcontents
+
+# First attempt
+__Executive Summary:__ We constructed a 3 day study where we randomly picked the days, times, and floors to construct our sample. Using an effect size calculator the minimum sample size needed to complete our study was 128 and we collected a sample of 308. The days we randomly selected to sample were Tuesday, Wednesday, and Thursday. On Tuesday we had a proportion of $77.88\%$ wearing medical grade masks, Wednesday had $73.23\%$, and Thursday had $61.76\%$. Overall we calculated that $72.40\%$ of the students in our sample wore medical grade masks in the library. After performing a test on our sample we have concluded that there is not enough evidence to support that less than $65\%$ of students in the library wear medical grade masks. From this we can state that at least $65\%$ of students in the library are wearing the appropriate medical grade masks.
+
+
+
+* Only the client will read this.
+* Our results.
+* The way we constructed the study.
+
+
+
+
+
+
+
+
+
+
