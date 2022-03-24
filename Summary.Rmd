@@ -20,7 +20,14 @@ __Executive Summary:__ We constructed a 3 day study where we randomly picked the
 * The way we constructed the study.
 
 
+# Background
+__Background and Goals:__ Cal Poly Pomona received a new mandate that at least $65\%$ of the people in the library need to be wearing medical grade masks. If they do not meet this mandate, then they will have to organize a campaign to get people in the library to wear the medical grade masks. A concern regarding this situation is if less than $65\%$ of the people in the library are wearing medical grade masks, then the school would have to use a portion of their funds towards a campaign instead of other projects that could benefit the learning and overall college experience of students. Another concern is the health safety of students and staff members. If Cal Poly Pomona reports that they are following the mandate when in reality they aren't, then they would be putting the well being of students, staff members, and other visitors in higher risk of getting COVID-19.
 
+Our goal is to provide as precise of an answer as we can to the question being asked to make our client happy. We also want to assist Cal Poly Pomona in creating a safe environment for their students and staff members. First, we want to pick a sample size that matches how accurate we want our sample proportion to be to the population. Since, this question is regarding the health of people we will choose a high confidence level. Also, we want to design a way of collecting our sample that would produce a precise result.
+
+# Analysis
+
+# Results
 
 
 
