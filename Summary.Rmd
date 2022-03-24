@@ -1,0 +1,37 @@
+---
+title: "Summary"
+author: "Connor Adams"
+date: "3/21/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+\tableofcontents
+
+# First attempt
+__Executive Summary:__ We constructed a 3 day study where we randomly picked the days, times, and floors to construct our sample. Using an effect size calculator the minimum sample size needed to complete our study was 128 and we collected a sample of 308. The days we randomly selected to sample were Tuesday, Wednesday, and Thursday. On Tuesday we had a proportion of $77.88\%$ wearing medical grade masks, Wednesday had $73.23\%$, and Thursday had $61.76\%$. Overall we calculated that $72.40\%$ of the students in our sample wore medical grade masks in the library. After performing a test on our sample we have concluded that there is not enough evidence to support that less than $65\%$ of students in the library wear medical grade masks. From this we can state that at least $65\%$ of students in the library are wearing the appropriate medical grade masks.
+
+
+
+* Only the client will read this.
+* Our results.
+* The way we constructed the study.
+
+
+# Background
+__Background and Goals:__ Cal Poly Pomona received a new mandate that at least $65\%$ of the people in the library need to be wearing medical grade masks. If they do not meet this mandate, then they will have to organize a campaign to get people in the library to wear the medical grade masks. A concern regarding this situation is if less than $65\%$ of the people in the library are wearing medical grade masks, then the school would have to use a portion of their funds towards a campaign instead of other projects that could benefit the learning and overall college experience of students. Another concern is the health safety of students and staff members. If Cal Poly Pomona reports that they are following the mandate when in reality they aren't, then they would be putting the well being of students, staff members, and other visitors in higher risk of getting COVID-19.
+
+Our goal is to provide as precise of an answer as we can to the question being asked to make our client happy. We also want to assist Cal Poly Pomona in creating a safe environment for their students and staff members. First, we want to pick a sample size that matches how accurate we want our sample proportion to be to the population. Since, this question is regarding the health of people we will choose a high confidence level. Also, we want to design a way of collecting our sample that would produce a precise result.
+
+# Analysis
+
+# Results
+
+
+
+
+
+
+
