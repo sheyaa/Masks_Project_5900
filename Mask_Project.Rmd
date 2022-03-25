@@ -21,7 +21,7 @@ library(kableExtra)
 
 # Executive Summary
 
-Our team performed a three day study to report if the California Polytechnic State University’s library was meeting the required minimum of 65% of its students and staff wearing medical grade masks. In order to minimize bias in our data, we constructed our study by randomly choosing the days, times, and library floors at which we would collect our data. 
+Our team performed a three day study to report if the California Polytechnic State University’s library was meeting the required minimum of 65% of its students and staff wearing appropriate medical grade masks. In order to minimize bias in our data, we constructed our study by randomly choosing the days, times, and library floors at which we collected our data. 
 
 We collected a total sample of 308 throughout the three days Tuesday, Wednesday, and Thursday in which we found that the proportion of students and staff who were wearing medical grade masks was 77.88%, 73.23% and 61.76% respectively. The overall result for the three days was 72.4% of students and staff wearing medical grade masks in the library. Therefore, our findings show that based on our sample there was insufficient evidence that less than 65% of students and staff in the library wear the appropriate medical grade masks. 
 
