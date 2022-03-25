@@ -1,0 +1,270 @@
+---
+title: "Medical Grade Masks In CPP Library"
+author: 
+- "Connor Adams" 
+- "Evan Scheerer"
+- "Yodd Mena"
+
+date: "3/23/2022"
+output: pdf_document
+header-includes:
+- \usepackage{xcolor}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align="center", fig.height=3)
+library(kableExtra)
+```
+\newpage
+\tableofcontents
+\newpage
+
+# Executive Summary
+
+We constructed a 3 day study where we randomly picked the days, times, and floors to construct our sample. Using an effect size calculator the minimum sample size needed to complete our study was 127 and we collected a sample of 308. The days we randomly selected to sample were Tuesday, Wednesday, and Thursday. On Tuesday we had a proportion of $78\%$ wearing medical grade masks, Wednesday had $73\%$, and Thursday had $62\%$. Overall we calculated that $72\%$ of the students in our sample wore medical grade masks in the library. After performing a test on our sample we have concluded that there is not enough evidence to support that less than $65\%$ of students in the library wear medical grade masks. From this we can state that at least $65\%$ of students in the library are wearing the appropriate medical grade masks.
+
+\newpage
+# Background
+
+Cal Poly Pomona received a new mandate that at least $65\%$ of the people in the library need to be wearing medical grade masks. If they do not meet this mandate, then they will have to organize a campaign to get people in the library to wear the medical grade masks. A concern regarding this situation is if less than $65\%$ of the people in the library are wearing medical grade masks, then the school would have to use a portion of their funds towards a campaign instead of other projects that could benefit the learning and overall college experience of students. Another concern is the health safety of students and staff members. If Cal Poly Pomona reports that they are following the mandate when in reality they aren't, then they would be putting the well being of students, staff members, and other visitors in higher risk of getting COVID-19.
+
+Our goal is to provide as precise of an answer as we can to the question being asked to make our client happy. We also want to assist Cal Poly Pomona in creating a safe environment for their students and staff members. First, we want to pick a sample size that matches how accurate we want our sample proportion to be to the population. Since, this question is regarding the health of people we will choose a high confidence level. Also, we want to design a way of collecting our sample that would produce a precise result.
+
+# Analysis
+
+We began by using an effect size calculator to determine the sample size needed to assure our client that we are being as accurate as possible. We decided to choose an effect size of $0.15$ and minimize our chances of a type 1 error by picking our $\alpha=.01$. This resulted in us needing a minimum sample size of 127 observations, given that we construct a simple random sample.
+
+Next, we needed to decide how we will be collecting our sample. A simple random sample was not probable given that we would need to know our population and randomly pick from there. We decided to choose a cluster because we can then randomize when and where to collect the sample instead of the people. So, we randomly chose 3 days to sample and of those 3 days we randomly chose times and floors of the library to collect our data.
+
+We needed to test whether we believe $65\%$ of students were wearing medical grade masks at the library. Therefore we set up a hypothesis test to test our data.
+\newline
+$H_0: p \geq 0.65$ This means that at least 65% of students are wearing a medical grade mask in the library.
+\newline
+$H_A: p < 0.65$ This means that less than 65% of students are wearing a medical grade mask in the library. 
+\newpage
+
+# Results
+
+The following table shows the days we observed , the floors observed on the specific day, and the total observation on each day. 
+
+```{r, echo=FALSE}
+tab <- matrix(c("Tuesday", "Wednesday","Thursday", 2,4,3,88,93,42,25,34,26),ncol=4)
+colnames(tab) <- c("Days", "Floor", "Medical", "Non-Medical")
+kbl(tab, format = "latex", align = 'lccc', caption = "Frequency Distribution Table of People in The Library") %>%
+  kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+From the table you can see that each day and floor more people wore medical grade masks then didn't which is partially what we are looking for.
+\newline
+Below represents the frequency of those who wore medical grade masks versus didn't based on the day the data was collected.
+```{r, echo=FALSE}
+par(mfrow=c(1,2))
+table_tu <- c(88,25)
+barplot(table_tu,main="         Medical vs. Non-Medical
+        Tuesday, 5-6, Floor 2",xlab="Mask Type",ylab="Number Observed",ylim=c(0,100),
+        names.arg=c("Medical","Non-Medical"),col=c("lightblue","mistyrose"))
+legend('topright', title="Proportions",legend=c("78%","22%"), cex=.7,
+       col=c("lightblue","mistyrose"),pch=c(15,15))
+text(0.68,10,"88")
+text(1.9,10,"25")
+table_wed <- c(93,34)
+barplot(table_wed,main="         Medical vs. Non-Medical
+        Wednesday, 5-6, Floor 4",xlab="Mask Type",
+        ylab="Number Observed",ylim=c(0,100),names.arg=c("Medical","Non-Medical"),
+        col=c("lightblue","mistyrose"))
+legend('topright', title="Proportions",legend=c("73%","27%"), cex=.7,
+       col=c("lightblue","mistyrose"),pch=c(15,15))
+text(0.68,10,"93")
+text(1.9,10,"34")
+table_th <- c(42,26)
+barplot(table_th,main="         Medical vs. Non-Medical
+        Thursday, 7-8, Floor 3",xlab="Mask Type",
+        ylab="Number Observed",ylim=c(0,100),names.arg=c("Medical","Non-Medical"),
+        col=c("lightblue","mistyrose"))
+legend('topright', title="Proportions",legend=c("62%","38%"), cex=.7,
+       col=c("lightblue","mistyrose"),pch=c(15,15))
+text(0.68,10,"42")
+text(1.9,10,"26")
+table_tot <- c(223,85)
+barplot(table_tot,main="         Medical vs. Non-Medical
+        Total Observations",xlab="Mask Type",
+        ylab="Number Observed",ylim=c(0,250),names.arg=c("Medical","Non-Medical"),
+        col=c("lightblue","mistyrose"))
+legend('topright', title="Proportions",legend=c("72%","28%"), cex=.7,
+       col=c("lightblue","mistyrose"),pch=c(15,15))
+text(0.68,25,"223")
+text(1.9,25,"85")
+```
+Looking at our bar graph for the total number of observations we can see that $72\%$ of our sample were wearing medical grade masks. In order to reject our null hypothesis of at least $65\%$ Of people in the library are wearing medical grade masks we would need to observe that less than $58.67\%$ of our sample wore medical grade masks.
+
+# Conclusion
+
+We can see from the graph above that 72% of students were wearing a medical grade mask. Since this gives us test statistic of $2.72$, we can see that the p-value is $0.9967$ which is greater than our significance level of $0.01$.
+\newline
+This means there is insufficient evidence. In other words, we fail to reject $H_0: p = 0.65$ which states that 65% of students are wearing masks.
+\newline
+Thus, we are confident that at least 65% of students are wearing medical grade masks in the Cal Poly Pomona Library. 
+
+# Appendix A (Equations)
+\begin{center}
+$p = \frac{223}{308} = 0.7240$
+
+$\sigma = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{.65(.35)}{308}} = 0.0272$
+
+$z = \frac{p-\hat{p}}{\sigma} = \frac{.7240-.65}{0.0272}$
+
+$p\rightarrow$ Sample proportion
+
+$\hat{p}\rightarrow$ Expected proportion
+
+$\sigma\rightarrow$ Standard deviation
+
+$P(z\leq -2.33) = 0.01 = \alpha$
+
+$P(z\leq 2.72) = 0.9967$
+
+\end{center}
+
+# Appendix B (Codes)
+
+__Table:__
+```{r eval=FALSE}
+tab <- matrix(c("Tuesday", "Wednesday","Thursday", 2,4,3,88,93,42,25,34,26),ncol=4)
+colnames(tab) <- c("Days", "Floor", "Medical", "Non-Medical")
+kbl(tab, format = "latex", align = 'lccc', caption = "Frequency Distribution Table of People in The Library") %>%
+  kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+__Bar Graph Tuesday:__
+
+```{r eval=FALSE}
+table_tu <- c(88,25)
+barplot(table_tu,main="         Medical vs. Non-Medical
+        Tuesday, 5-6, Floor 2",xlab="Mask Type",ylab="Number Observed",ylim=c(0,100),
+        names.arg=c("Medical","Non-Medical"),col=c("lightblue","mistyrose"))
+legend('topright', title="Proportions",legend=c("78%","22%"),
+       col=c("lightblue","mistyrose"),pch=c(15,15))
+text(0.68,10,"88")
+text(1.9,10,"25")
+```
+
+__Bar Graph Wednesday:__
+
+```{r eval=FALSE}
+table_wed <- c(93,34)
+barplot(table_wed,main="         Medical vs. Non-Medical
+        Wednesday, 5-6, Floor 4",xlab="Mask Type",
+        ylab="Number Observed",ylim=c(0,100),names.arg=c("Medical","Non-Medical"),
+        col=c("lightblue","mistyrose"))
+legend('topright', title="Proportions",legend=c("73%","27%"),
+       col=c("lightblue","mistyrose"),pch=c(15,15))
+text(0.68,10,"93")
+text(1.9,10,"34")
+```
+
+__Bar Graph Thursday:__
+
+```{r eval=FALSE}
+table_th <- c(42,26)
+barplot(table_th,main="         Medical vs. Non-Medical
+        Thursday, 7-8, Floor 3",xlab="Mask Type",
+        ylab="Number Observed",ylim=c(0,100),names.arg=c("Medical","Non-Medical"),
+        col=c("lightblue","mistyrose"))
+legend('topright', title="Proportions",legend=c("62%","38%"),
+       col=c("lightblue","mistyrose"),pch=c(15,15))
+text(0.68,10,"42")
+text(1.9,10,"26")
+```
+
+__Bar Graph Total:__
+
+```{r eval=FALSE}
+table_tot <- c(223,85)
+barplot(table_tot,main="         Medical vs. Non-Medical
+        Total Observations",xlab="Mask Type",
+        ylab="Number Observed",ylim=c(0,250),names.arg=c("Medical","Non-Medical"),
+        col=c("lightblue","mistyrose"))
+legend('topright', title="Proportions",legend=c("72%","28%"),
+       col=c("lightblue","mistyrose"),pch=c(15,15))
+text(0.68,25,"223")
+text(1.9,25,"85")
+```
+
+__Table:__
+
+```{r, eval=FALSE}
+tab <- matrix(c("Tuesday", "Wednesday","Thursday", 2,4,3,88,93,42,25,34,26),ncol=4)
+colnames(tab) <- c("Days", "Floor", "Medical", "Non-Medical")
+cap = "Frequency Distribution Table of People in The Library"
+kbl(tab, format = "latex", align = 'lccc', caption = cap) %>%
+  kable_styling(latex_options = c("striped", "hold_position"))
+```
+
+__Random Generator:__
+
+```{matlab, eval=FALSE}
+% Randomized schedule maker
+
+clear
+clc
+
+    % This is our availabilty for each day.
+M = [2:6];
+T = [12,1,5:9];
+W = M;
+Th = T;
+F = [5:8];
+    % Comment out friday because we want our results by friday, but we
+        % can include it if we want.
+% F = [5:7];
+
+    % Randomly picks 3 days.
+
+% number of days we are picking.
+n = 3;
+% number of days we are picking from.
+m = 4;
+days = randperm(m,n);
+
+for i = 1:length(days)
+    if days(i) == 1
+            % randomly picks start time.
+        T_Begin = randsample(M,1);
+        T_End = mod(T_Begin+1,12);
+        floor = randi([2,6]);
+            % Prints schedule in command window.
+        fprintf("Monday: %d - %d\nFloor: %d\n",[T_Begin,T_End,floor])
+
+    elseif days(i) == 2
+        T_Begin = randsample(T,1);
+        T_End = mod(T_Begin+1,12);
+        floor = randi([2,6]);
+            % Prints schedule in command window.
+        fprintf("Tuesday: %d - %d\nFloor: %d\n",[T_Begin,T_End,floor])
+
+    elseif days(i) == 3
+        T_Begin = randsample(W,1);
+        T_End = mod(T_Begin+1,12);
+        floor = randi([2,6]);
+            % Prints schedule in command window.
+        fprintf("Wednesday: %d - %d\nFloor: %d\n",[T_Begin,T_End,floor])
+
+    elseif days(i) == 4
+        T_Begin = randsample(Th,1);
+        T_End = mod(T_Begin+1,12);
+        floor = randi([2,6]);
+            % Prints schedule in command window.
+        fprintf("Thursday: %d - %d\nFloor: %d\n",[T_Begin,T_End,floor])
+
+    else
+        T_Begin = randsample(F,1);
+        T_End = mod(T_Begin+1,12);
+        floor = randi([2,6]);
+            % Prints schedule in command window.
+        fprintf("Friday: %d - %d\nFloor: %d\n",[T_Begin,T_End,floor])
+
+    end
+end
+
+```
+
