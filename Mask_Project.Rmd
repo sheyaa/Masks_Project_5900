@@ -105,6 +105,7 @@ This means there is insufficient evidence. In other words, we fail to reject $H_
 \newline
 Thus, we are confident that at least 65% of students are wearing medical grade masks in the Cal Poly Pomona Library. 
 
+\newpage
 # Appendix A (Equations)
 \begin{center}
 $p = \frac{223}{308} = 0.7240$
