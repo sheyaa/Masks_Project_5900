@@ -29,7 +29,7 @@ We collected a total sample of 308 throughout the three days Tuesday, Wednesday,
 \newpage
 # Background
 
-Cal Poly Pomona received a new mandate that at least $65\%$ of the people in the library need to be wearing medical grade masks. If they do not meet this mandate, then they will have to organize a campaign to get people in the library to wear the medical grade masks. A concern regarding this situation is if less than $65\%$ of the people in the library are wearing medical grade masks, then the school would have to use a portion of their funds towards a campaign instead of other projects that could benefit the learning and overall college experience of students. Another concern is the health safety of students and staff members. If Cal Poly Pomona reports that they are following the mandate when in reality they aren't, then they would be putting the well being of students, staff members, and other visitors in higher risk of getting COVID-19.
+Cal Poly Pomona received a new mandate that at least $65\%$ of the people in the library need to be wearing medical grade masks. If they do not meet this mandate, then they will have to organize a campaign to get people in the library to wear the medical grade masks. A concern regarding this situation is if less than $65\%$ of the people in the library are wearing medical grade masks, then the school would have to use a portion of their funds towards a campaign instead of other projects that could benefit the learning and overall college experience of students. Another concern is the health safety of students and staff members. If Cal Poly Pomona reports that they are following the mandate when in reality they are not, then they would be putting the well being of students, staff members, and other visitors in higher risk of getting COVID-19.
 
 Our goal is to provide as precise of an answer as we can to the question being asked to make our client happy. We also want to assist Cal Poly Pomona in creating a safe environment for their students and staff members. First, we want to pick a sample size that matches how accurate we want our sample proportion to be to the population. Since, this question is regarding the health of people we will choose a high confidence level. Also, we want to design a way of collecting our sample that would produce a precise result.
 
@@ -57,9 +57,9 @@ kbl(tab, format = "latex", align = 'lccc', caption = "Frequency Distribution Tab
   kable_styling(latex_options = c("striped", "hold_position"))
 ```
 
-From the table you can see that each day and floor more people wore medical grade masks then didn't which is partially what we are looking for.
+From the table you can see that each day and floor more people wore medical grade masks then did not which is partially what we are looking for.
 \newline
-Below represents the frequency of those who wore medical grade masks versus didn't based on the day the data was collected.
+Below represents the frequency of those who wore medical grade masks versus did not based on the day the data was collected.
 ```{r, echo=FALSE}
 par(mfrow=c(1,2))
 table_tu <- c(88,25)
@@ -271,4 +271,3 @@ for i = 1:length(days)
 end
 
 ```
-
