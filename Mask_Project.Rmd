@@ -42,7 +42,8 @@ We needed to test whether we believe $65\%$ of students were wearing medical gra
 $H_0: p \geq 0.65$ This means that at least 65% of students are wearing a medical grade mask in the library.
 \newline
 $H_A: p < 0.65$ This means that less than 65% of students are wearing a medical grade mask in the library. 
-\newpage
+
+When observing, we ran into a few struggles. For example, it was difficult to tell if someone was wearing a mask at times. They had their head down, were in an area where we could not see their face. Also, students would be eating, but would forget to pull their mask up when they were done eating. Therefore, the following data we observed is to the best of our ability, with hopefully minor errors. 
 
 # Results
 
