@@ -5,7 +5,7 @@ author:
 - "Evan Scheerer"
 - "Yodd Mena"
 
-date: "3/23/2022"
+date: "March 23, 2022"
 output: pdf_document
 header-includes:
 - \usepackage{xcolor}
@@ -15,6 +15,7 @@ header-includes:
 knitr::opts_chunk$set(echo = TRUE, fig.align="center", fig.height=3)
 library(kableExtra)
 ```
+
 \newpage
 \tableofcontents
 \newpage
@@ -35,19 +36,20 @@ Our goal is to provide as precise of an answer as we can to the question being a
 
 We began by using an effect size calculator to determine the sample size needed to assure our client that we are being as accurate as possible. We decided to choose an effect size of $0.15$ and minimize our chances of a type 1 error by picking our $\alpha=.01$. This resulted in us needing a minimum sample size of 127 observations, given that we construct a simple random sample.
 
-Next, we needed to decide how we will be collecting our sample. A simple random sample was not probable given that we would need to know our population and randomly pick from there. We decided to choose a cluster because we can then randomize when and where to collect the sample instead of the people. So, we randomly chose 3 days to sample and of those 3 days we randomly chose times and floors of the library to collect our data.
+Next, we needed to decide how we will be collecting our sample. A simple random sample was not probable given that we would need to know our population and randomly pick from there. We decided to choose a cluster because we can then randomize when and where to collect the sample instead of the people. So, using a random generator we randomly chose 3 days to sample and of those 3 days we randomly chose times and floors of the library to collect our data.
 
 We needed to test whether we believe $65\%$ of students were wearing medical grade masks at the library. Therefore we set up a hypothesis test to test our data.
+\newline
 \newline
 $H_0: p \geq 0.65$ This means that at least 65% of students are wearing a medical grade mask in the library.
 \newline
 $H_A: p < 0.65$ This means that less than 65% of students are wearing a medical grade mask in the library. 
 
-When observing, we ran into a few struggles. For example, it was difficult to tell if someone was wearing a mask at times. They had their head down, were in an area where we could not see their face. Also, students would be eating, but would forget to pull their mask up when they were done eating. Therefore, the following data we observed is to the best of our ability, with hopefully minor errors. 
+When observing our sample, we ran into a few issues. For instance, it was difficult at times to identify if someone was wearing a mask at all. They either had their head down or were in an area where we could not see their face. Also, students would be eating, but would forget to pull their mask up once they were done. Therefore, the following data we observed is to the best of our ability, with hopefully consists of minor errors. 
 
 # Results
 
-The following table shows the days we observed , the floors observed on the specific day, and the total observation on each day. 
+The following table shows the days we observed , the floors observed on the specific day, and the total observation on each day. From the table you can see that each day and floor more people wore medical grade masks then did not which is partially what we are looking for.
 
 ```{r, echo=FALSE}
 tab <- matrix(c("Tuesday", "Wednesday","Thursday", 2,4,3,88,93,42,25,34,26),ncol=4)
@@ -56,8 +58,6 @@ kbl(tab, format = "latex", align = 'lccc', caption = "Frequency Distribution Tab
   kable_styling(latex_options = c("striped", "hold_position"))
 ```
 
-From the table you can see that each day and floor more people wore medical grade masks then did not which is partially what we are looking for.
-\newline
 Below represents the frequency of those who wore medical grade masks versus did not based on the day the data was collected.
 ```{r, echo=FALSE}
 par(mfrow=c(1,2))
@@ -101,11 +101,7 @@ Looking at our bar graph for the total number of observations we can see that $7
 
 # Conclusion
 
-We can see from the graph above that 72% of students were wearing a medical grade mask. Since this gives us test statistic of $2.72$, we can see that the p-value is $0.9967$ which is greater than our significance level of $0.01$.
-\newline
-This means there is insufficient evidence. In other words, we fail to reject $H_0: p = 0.65$ which states that 65% of students are wearing masks.
-\newline
-Thus, we are confident that at least 65% of students are wearing medical grade masks in the Cal Poly Pomona Library. 
+From our results, we can conclude that 72% of the students and staff were wearing appropriate medical grade masks in the library. Since we got a test statistic of $2.72$, we can see that the p-value is $0.9967$ which is greater than our significance level of $0.01$. This means there is insufficient evidence that less than 65% of students and staff in the library wear the appropriate medical grade masks. In other words, we fail to reject $H_0: p = 0.65$ which states that 65% of students are wearing masks. Thus, we are confident that at least 65% of students are wearing medical grade masks in the Cal Poly Pomona Library. 
 
 \newpage
 # Appendix A (Equations)
@@ -155,7 +151,7 @@ __Bar Graph Wednesday:__
 
 ```{r eval=FALSE}
 table_wed <- c(93,34)
-barplot(table_wed,main="         Medical vs. Non-Medical
+barplot(table_wed,main="        Medical vs. Non-Medical
         Wednesday, 5-6, Floor 4",xlab="Mask Type",
         ylab="Number Observed",ylim=c(0,100),names.arg=c("Medical","Non-Medical"),
         col=c("lightblue","mistyrose"))
