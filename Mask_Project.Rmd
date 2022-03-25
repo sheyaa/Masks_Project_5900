@@ -25,8 +25,6 @@ Our team performed a three day study to report if the California Polytechnic Sta
 
 We collected a total sample of 308 throughout the three days Tuesday, Wednesday, and Thursday in which we found that the proportion of students and staff who were wearing medical grade masks was 77.88%, 73.23% and 61.76% respectively. The overall result for the three days was 72.4% of students and staff wearing medical grade masks in the library. Therefore, our findings show that based on our sample there was insufficient evidence that less than 65% of students and staff in the library wear the appropriate medical grade masks. 
 
-
-\newpage
 # Background
 
 Cal Poly Pomona received a new mandate that at least $65\%$ of the people in the library need to be wearing medical grade masks. If they do not meet this mandate, then they will have to organize a campaign to get people in the library to wear the medical grade masks. A concern regarding this situation is if less than $65\%$ of the people in the library are wearing medical grade masks, then the school would have to use a portion of their funds towards a campaign instead of other projects that could benefit the learning and overall college experience of students. Another concern is the health safety of students and staff members. If Cal Poly Pomona reports that they are following the mandate when in reality they are not, then they would be putting the well being of students, staff members, and other visitors in higher risk of getting COVID-19.
